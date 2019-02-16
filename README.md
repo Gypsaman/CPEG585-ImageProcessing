@@ -1,8 +1,10 @@
 # CPEG585-ImageProcessing
 Image Processing Assignments 1 and 2
-See Imaging Processing.pdf for screen shots of the program
 
-To create the multiple kernels requested in assignment 1 the kerneldata class was created.
+See `ImageProcessing.pdf` for screen shots of the program
+
+To create the multiple kernels requested in assignment 2 the `kerneldata` class was created.  This process was over engineered for educational purposes.  Base low pass filters were defined, permitting the kernel to convert itself into a High pass kernel (if defined as a low pass filter).
+
 ```c#
         public class kerneldata
         {
@@ -34,3 +36,28 @@ To create the multiple kernels requested in assignment 1 the kerneldata class wa
             }
         }
 ```
+
+A function to generate the kernel is created, for example here is a generator for Average Low Pass Filter.
+
+```c#
+        public static double[,] GenerateAverage(int size = 3, double param = 0)
+        {
+            double[,] result = new double[size, size];
+            int center = (int)Math.Floor((double)size / 2);
+            for (int row = 0; row < size; row++)
+            {
+                for (int col = 0; col < size; col++)
+                    result[row, col] = (1.0 / (size*size));
+            }
+
+            return result;
+        }
+```
+
+With this function the kernel can be created 
+```c#
+        public kerneldata Average = new kerneldata(GenerateAverage, 3, 1){IsLowPass = true};
+```
+
+
+Other Kernels requested utilize these kernels as part of their computation.
