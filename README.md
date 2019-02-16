@@ -3,7 +3,7 @@ Image Processing Assignments 1 and 2
 See Imaging Processing.pdf for screen shots of the program
 
 To create the multiple kernels requested in assignment 1 the kerneldata class was created.
-'''c#
+```c#
         public class kerneldata
         {
             private int _size;
@@ -33,4 +33,4 @@ To create the multiple kernels requested in assignment 1 the kerneldata class wa
                 return hp;
             }
         }
-'''
+```
