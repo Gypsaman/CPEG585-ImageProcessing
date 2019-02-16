@@ -1,0 +1,29 @@
+﻿<Window x:Class="ImageProcessing2019.KernelSelection"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ImageProcessing2019"
+        mc:Ignorable="d"
+        Title="KernelSelection" Height="272.015" Width="452.076">
+    <Grid x:Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="97*"/>
+            <RowDefinition Height="322*"/>
+            <RowDefinition Height="97*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0" >
+            <TextBlock Text="Available Kernels" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5"/>
+            <ComboBox x:Name="cmbKernels" Margin="5" MinWidth ="100"  VerticalAlignment="Center" HorizontalAlignment="Center" SelectionChanged="cmbKernels_SelectionChanged"/>
+            <CheckBox x:Name ="ckIsLowPass" Content="Low Pass" Margin="5" VerticalAlignment="Center"/>
+            <Button x:Name="HPConvert" Content="Convert to HP" Margin="0,10" Click="HPConvert_Click"></Button>
+            <TextBox x:Name="KernelSum" Margin="5" VerticalAlignment="Center" MinWidth="15"/>
+        </StackPanel>
+        <Grid x:Name="KernelMatrix" Grid.Row="1"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2">
+            <Button x:Name="btnOK" Content="OK" Margin="5" Click="btnOK_Click"/>
+            <Button x:Name="btnCancel" Content="Cancel" Margin="5" Click="btnCancel_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
