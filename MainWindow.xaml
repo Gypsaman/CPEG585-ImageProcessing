@@ -15,7 +15,9 @@
             <Menu Name="MainMenu" Padding="0" HorizontalAlignment="Left" Background="Aqua" VerticalAlignment="Center">
                 <MenuItem Header="_File">
                     <MenuItem Header="_Open" Click="FileOpen_ClickedOn"/>
+                    <MenuItem Header="_Image Properties" Click="ImageProperties_ONClick"></MenuItem>
                     <MenuItem Header="_Save Processed Image"/>
+                    <MenuItem Header="_Test" Click="Test_OnClick"/>
                 </MenuItem>
                 <MenuItem Header="_Conversions">
                     <MenuItem Header="_Convert to Gray" Click="GrayScale_OnClick"/>

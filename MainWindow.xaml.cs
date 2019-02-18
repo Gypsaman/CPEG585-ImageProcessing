@@ -136,5 +136,22 @@ namespace ImageProcessing2019
                     PaintImage(CompImage, ImageProcessing.SubtractBitMaps(origImageBMP, modImageBMP));
             }
         }
+
+        private void ImageProperties_ONClick(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show($"Height: {origImageBMP.Height}\n" +
+                            $"Width: {origImageBMP.Width}\n" +
+                            $"Horizontal Resolution: {origImageBMP.HorizontalResolution}\n" +
+                            $"Vertical Resolution: {origImageBMP.VerticalResolution}\n" +
+                            $"Pixel Format: {origImageBMP.PixelFormat}");
+        }
+
+        private void Test_OnClick(object sender, RoutedEventArgs e)
+        {
+            Kernels kernel = new Kernels();
+            kernel.test();
+            
+        }
+        
     }
 }
