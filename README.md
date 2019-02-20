@@ -61,3 +61,16 @@ With this function the kernel can be created
 
 
 Other Kernels requested utilize these kernels as part of their computation.
+
+# Problems with Laplacian Kernel
+
+The laplacian kernel has no method to autogenerate.  Instead I researched the Laplacian of the Gaussian.  Found these two articles:
+
+[Laplacian of Gaussian Filter](https://academic.mu.edu/phys/matthysd/web226/Lab02.htm) and
+[Spatial Filters - Laplacian/Laplacian Gaussian](https://homepages.inf.ed.ac.uk/rbf/HIPR2/log.htm)
+
+Even though both of these had the same formula and same 9x9 discrete approximation, the formulas did not seem to work.
+
+in this [article] (https://www.codeproject.com/Questions/70003/Laplacian-of-Gaussian) the last solution talks
+
+
