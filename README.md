@@ -82,9 +82,11 @@ the formulas did not seem to work.
 
 by changing the formula to:
 
+`r latexImg('LoG(x,y) = \\frac{-1}{2\\pi\sigma^4}[1-\frac{x^2+y^2}{2\sigma^2}]\exp-\frac{x^2+y^2}{2\sigma^2$')`
 
-$LoG(x,y) = \frac{-1}{2\pi\sigma^4}[1-\frac{x^2+y^2}{2\sigma^2}]\exp-\frac{x^2+y^2}{2\sigma^2$
 
+in this [article](https://www.codeproject.com/Questions/70003/Laplacian-of-Gaussian) the last solution mentions:
 
-in this [article](https://www.codeproject.com/Questions/70003/Laplacian-of-Gaussian) the last solution talks
+One way to do this is by finding sum of all the values and increase net positive values in kernel by exactly that amount so that the sum of all values is 0. To preserve the shape of filter to maximum extent possible, you should do a weighted increment of the positive values for eg. let sum of all values be S; sum of all positive values be PS. Then for every positive value N, increase it by N*S/PS and let the negative values be as it is.
 
+By incorporating both solutions, we get a valid kernel
