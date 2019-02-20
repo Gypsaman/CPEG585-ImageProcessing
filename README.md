@@ -83,9 +83,7 @@ the formulas did not seem to work.
 by changing the formula to:
 
 
-\begin{equation}
-        LoG(x,y) = \frac{-1}{2\pi\sigma^4}[1-\frac{x^2+y^2}{2\sigma^2}]\exp-\frac{x^2+y^2}{2\sigma^2
-\end{equation}
+\(LoG(x,y) = \frac{-1}{2\pi\sigma^4}[1-\frac{x^2+y^2}{2\sigma^2}]\exp-\frac{x^2+y^2}{2\sigma^2\)
 
 
 in this [article](https://www.codeproject.com/Questions/70003/Laplacian-of-Gaussian) the last solution talks
