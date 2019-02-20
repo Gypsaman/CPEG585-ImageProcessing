@@ -69,8 +69,19 @@ The laplacian kernel has no method to autogenerate.  Instead I researched the La
 [Laplacian of Gaussian Filter](https://academic.mu.edu/phys/matthysd/web226/Lab02.htm) and
 [Spatial Filters - Laplacian/Laplacian Gaussian](https://homepages.inf.ed.ac.uk/rbf/HIPR2/log.htm)
 
-Even though both of these had the same formula and same 9x9 discrete approximation, the formulas did not seem to work.
+Even though both of these had the same formula
+![alt text](Image174.gif)
 
-in this [article] (https://www.codeproject.com/Questions/70003/Laplacian-of-Gaussian) the last solution talks
+ and same 9x9 discrete approximation
+ !(Lab02.1.gif)
+ 
+the formulas did not seem to work.
+
+by changing the formula to:
+\begin{align}
+LoG(x,y) = -\frac{1}{2\pi\sigma^4}[1-\frac{x^2+y^2}{2\sigma^2}\exp-\frac{x^2+y^2}{2\sigma^2
+\end{align}
+
+in this [article](https://www.codeproject.com/Questions/70003/Laplacian-of-Gaussian) the last solution talks
 
 
